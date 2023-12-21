@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { auth } from "./config.js";
 
 
@@ -8,16 +8,16 @@ const password = document.querySelector('#password');
 
 //check user login or logout
 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    window.location = home.html
-    const uid = user.uid;
-    // ...
-  } else {
-    console.log(errorMessage);
+// onAuthStateChanged(auth, (user) => {
+//   if (user) {
+//     window.location = home.html
+//     const uid = user.uid;
+//     // ...
+//   } else {
+//     console.log(errorMessage);
 
-  }
-});
+//   }
+// });
 
 //user signin
 
